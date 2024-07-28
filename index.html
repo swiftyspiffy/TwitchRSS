@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Create RSS feeds for your favorite Twitch streamers!">
+	<meta name="author" content="swiftyspiffy">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ESMYMYYZ6"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-7ESMYMYYZ6');
+	</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link href="resources/style.css" rel="stylesheet">
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>TwitchRSS > Home</title>
+</head>
+
+<body>
+    <div class="container mt-5 text-light">
+		<div class="row justify-content-center">
+			<div class="col-lg-6">
+				<div class="text-center mb-4">
+					<img src="resources/twitch.png" alt="Logo" class="logo mb-3">
+					<img src="resources/rss.png" alt="Logo" class="logo mb-3">
+				</div>
+				
+				<div class="row">
+					<h6>TwitchRSS is a service that publishes and maintains RSS feeds for Twitch channels. To get started, type a Twitch channel and selected a feed type to have a new RSS feed created.</h6>
+				</div>
+				<br><br>
+				
+				<div class="row">
+					<div class="col-md-6">
+						<h4 for="twitch_channel" class="form-label">Twitch Channel</h4>
+						<input type="text" class="form-control bg-dark text-light" id="twitch_channel" placeholder="Twitch Channel Name">
+					</div>
+					<div class="col-md-6">
+						<h4 class="form-label">Feed Type</h4>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="feed_type" value="online_offline" checked>
+							<label class="form-check-label" for="online">Stream Online/Offline</label><br>
+							<input class="form-check-input" type="radio" name="feed_type" value="channel_update">
+							<label class="form-check-label" for="online">Channel Updated (category / game, title, language)</label>
+						</div>
+					</div>
+				</div>
+				<br><br>
+				
+				<div class="row">
+					<center>
+						<div class="g-recaptcha" data-sitekey="6LdUBWQoAAAAAESqan2BwLMIgLKFEH0FcQ6QX6_M" data-callback="correctCaptcha"></div>
+					</center>
+				</div>
+				<br><br>
+				
+				<div class="row">
+					<button type="button" class="btn btn-dark" id="add_stream">Create RSS Feed</button>
+				</div>	
+				<br><br><br><br>
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="footer text-center">
+		<div class="media-body pb-0 mb-0 small lh-125">
+			<div class="container">
+				<span class="text-muted"><a href="https://twitchrss.com">TwitchRSS</a> is developed with ❤️&nbsp; by <a href="https://twitter.com/swiftyspiffy" target="_blank"><img src="https://lateshift.tv/twitter.png" width="25">swiftyspiffy</a>. Source: <a target="_blank" href="https://github.com/swiftyspiffy/TwitchRSS">github.com/swiftyspiffy/TwitchRSS</a></span>
+			</div>
+		</div>
+	</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="resources/script.js"></script>
+</body>
+
+</html>
