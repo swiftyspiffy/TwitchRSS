@@ -67,7 +67,7 @@ function constructStreamUpDownItem($feed) {
 	$rfc822Date = date('D, d M Y H:i:s O', $feed['event_at']);
 	$itm = '<item>' . PHP_EOL;
 		if($feed['direction'] == "online") {
-			$itm .= '<title>'.esc($feed['user_name']).' has has started streaming!</title>' . PHP_EOL;
+			$itm .= '<title>'.esc($feed['user_name']).' has started streaming!</title>' . PHP_EOL;
 			$itm .= '<description>'.esc($feed['user_name']).'\'s stream is live over at: https://twitch.tv/'.esc($feed['user_name']).'</description>' . PHP_EOL;
 		} else {
 			$itm .= '<title>'.esc($feed['user_name']).' has stopped streaming!</title>' . PHP_EOL;
